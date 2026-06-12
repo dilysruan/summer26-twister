@@ -1,0 +1,15 @@
+=========== 06/11/2026
+--- Initial look and clean up of data in "dilys-data-exploration.ipynb"
+--- Megan mentioned this site for more detail about headers:
+----- https://www.ncei.noaa.gov/stormevents/ 
+----- https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/Storm-Data-Export-Format.pdf 
+--- Looking at "./data/raw/StormEvents_details-ftp_v1.0_d2004_c20260323.csv.gz"
+---- What is the data quality?
+----- Files with location info: less data completeness in earlier years. Esp. 1990, 0% of events have location data, but 2000 has about 50% with location info
+
+-- Save the coordinates for the radar locations
+-- What's the effective radius for each radar?
+----- According to this website (https://www.roc.noaa.gov/roc-about-us.php) the max radius for WSR-88D stations is 430 km
+
+>> the population map doesn't have the right dynamic range
+>> need to identify points with lat and long and corresponding county
