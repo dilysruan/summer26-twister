@@ -14,3 +14,39 @@
 >> the population map doesn't have the right dynamic range. May need to check whether "fips_all" is accurate
 
 >> using API to get FIPS corresponding to lat & long. Working, but currently in an inefficient for loop
+
+
+=========== 06/12/2026
+# tornado events per year ~ 2000, more complete over time
+--- KDE and clustering is what we're initially thinking of for metrics, but let's look more at each column 
+--- Lianys will make a data frame with these entries:
+"""
+## Intereesting Geo Data
+*Event_ID
+* Begin Lat
+* Begin Long
+* End Lat
+* End Long 
+*State
+*YearMonth
+
+##  Interesting  Tonado Columns :
+* 'TOR_F_SCALE',
+* 'TOR_LENGTH', > Megan 
+* 'TOR_WIDTH',
+* 'TOR_OTHER_WFO',
+* 'TOR_OTHER_CZ_STATE',
+* TOR_OTHER_CZ_FIPS',
+* 'TOR_OTHER_CZ_NAME',
+*'BEGIN_RANGE'
+
+## Interesting Impact Columns:
+* INJURIES_DIRECT > Dilys
+* INJURIES_INDIRECT > Dilys 
+* DEATHS_DIRECT > Ravi 
+* DEATHS_INDIRECT > Ravi 
+* DAMAGE_PROPERTY > Lianys
+* DAMAGE_CROPS > Lianys 
+"""
+--- From here, Dilys will add FIPS and population associated with each tornado event lat & lon
+--- Radar map will be separate. Need to figure out accurate range (work on this as a group).
