@@ -11,5 +11,6 @@
 -- What's the effective radius for each radar?
 ----- According to this website (https://www.roc.noaa.gov/roc-about-us.php) the max radius for WSR-88D stations is 430 km
 
->> the population map doesn't have the right dynamic range
->> need to identify points with lat and long and corresponding county
+>> the population map doesn't have the right dynamic range. May need to check whether "fips_all" is accurate
+
+>> using API to get FIPS corresponding to lat & long. Working, but currently in an inefficient for loop
