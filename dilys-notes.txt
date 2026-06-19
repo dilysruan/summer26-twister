@@ -1,0 +1,49 @@
+=========== 06/11/2026
+--- Initial look and clean up of data in "dilys-data-exploration.ipynb"
+--- Megan mentioned this site for more detail about headers:
+----- https://www.ncei.noaa.gov/stormevents/ 
+----- https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/Storm-Data-Export-Format.pdf 
+--- Looking at "./data/raw/StormEvents_details-ftp_v1.0_d2004_c20260323.csv.gz"
+---- What is the data quality?
+----- Files with location info: less data completeness in earlier years. Esp. 1990, 0% of events have location data, but 2000 has about 50% with location info
+
+-- Save the coordinates for the radar locations
+-- What's the effective radius for each radar?
+----- According to this website (https://www.roc.noaa.gov/roc-about-us.php) the max radius for WSR-88D stations is 430 km
+
+>> the population map doesn't have the right dynamic range. May need to check whether "fips_all" is accurate
+
+>> using API to get FIPS corresponding to lat & long. Working, but currently in an inefficient for loop
+
+
+=========== 06/12/2026
+# tornado events per year ~ 2000, more complete over time
+--- KDE and clustering is what we're initially thinking of for metrics, but let's look more at each column
+--- Lianys will make a data frame with these entries:
+"""
+## Intereesting Geo Data
+*Event_ID
+* Begin Lat
+* Begin Long
+* End Lat
+* End Long
+*State
+*YearMonth
+
+##  Interesting Tonado Columns :
+* 'TOR_F_SCALE',
+* 'TOR_LENGTH', > Megan
+* 'TOR_WIDTH',
+* 'TOR_OTHER_WFO',
+* 'TOR_OTHER_CZ_STATE',
+* TOR_OTHER_CZ_FIPS',
+* 'TOR_OTHER_CZ_NAME',
+*'BEGIN_RANGE'
+
+## Interesting Impact Columns:
+* INJURIES_DIRECT > Dilys
+* INJURIES_INDIRECT > Dilys
+* DEATHS_DIRECT > Ravi
+* DEATHS_INDIRECT > Ravi
+* DAMAGE_PROPERTY > Lianys
+* DAMAGE_CROPS > Lianys
