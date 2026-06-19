@@ -18,7 +18,7 @@
 
 =========== 06/12/2026
 # tornado events per year ~ 2000, more complete over time
---- KDE and clustering is what we're initially thinking of for metrics, but let's look more at each column 
+--- KDE and clustering is what we're initially thinking of for metrics, but let's look more at each column
 --- Lianys will make a data frame with these entries:
 """
 ## Intereesting Geo Data
@@ -26,13 +26,13 @@
 * Begin Lat
 * Begin Long
 * End Lat
-* End Long 
+* End Long
 *State
 *YearMonth
 
-##  Interesting  Tonado Columns :
+##  Interesting Tonado Columns :
 * 'TOR_F_SCALE',
-* 'TOR_LENGTH', > Megan 
+* 'TOR_LENGTH', > Megan
 * 'TOR_WIDTH',
 * 'TOR_OTHER_WFO',
 * 'TOR_OTHER_CZ_STATE',
@@ -42,11 +42,8 @@
 
 ## Interesting Impact Columns:
 * INJURIES_DIRECT > Dilys
-* INJURIES_INDIRECT > Dilys 
-* DEATHS_DIRECT > Ravi 
-* DEATHS_INDIRECT > Ravi 
+* INJURIES_INDIRECT > Dilys
+* DEATHS_DIRECT > Ravi
+* DEATHS_INDIRECT > Ravi
 * DAMAGE_PROPERTY > Lianys
-* DAMAGE_CROPS > Lianys 
-"""
---- From here, Dilys will add FIPS and population associated with each tornado event lat & lon
---- Radar map will be separate. Need to figure out accurate range (work on this as a group).
+* DAMAGE_CROPS > Lianys
